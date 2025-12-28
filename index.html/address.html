@@ -1,0 +1,179 @@
+<h2 style="color:black; border-bottom:3px solid black; 
+           padding-bottom:6px; margin-top:30px;">
+    PCIe TLP Transaction Types
+</h2>
+<div style="text-align:center; margin:20px 0;">
+  <a href="https://quizlet.com/in/1125858789/computer-arc-flash-cards/?i=6f54m3&x=1jqU"
+     target="_blank"
+     style="display:inline-block; padding:14px 28px; background:black; color:white;
+            text-decoration:none; font-weight:bold; border:2px solid black; border-radius:8px;">
+    📘 Open Quizlet: Computer Arc Flashcards
+  </a>
+</div>
+
+
+<p style="font-size:16px; line-height:1.6; color:black;">
+    In <b>PCI Express (PCIe)</b>, communication between devices is carried out using 
+    <b>Transaction Layer Packets (TLPs)</b>. These packets define how data, control 
+    information, and status messages are exchanged between the <b>root complex</b>, 
+    endpoints, and switches.
+</p>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flip & Slide Flashcards</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+/* Flashcard wrapper */
+.flashcard-container {
+  perspective: 1000px;
+}
+
+/* Flashcard */
+.flashcard {
+  width: 420px;
+  height: 180px;
+  margin: auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+/* Flip */
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Card faces */
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.front {
+  background: white;
+}
+
+.back {
+  background: #f4f4f4;
+  transform: rotateY(180deg);
+}
+
+/* Controls */
+.controls {
+  margin-top: 25px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 12px;
+  background: black;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+/* Hint text */
+.hint {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎯 Computer Architecture – Fun Flashcards</h1>
+
+<div class="flashcard-container">
+  <div class="flashcard" id="card" onclick="flipCard()">
+    <div class="front" id="frontText"></div>
+    <div class="back" id="backText"></div>
+  </div>
+</div>
+
+<div class="controls">
+  <button onclick="prevCard()">⬅ Previous</button>
+  <button onclick="nextCard()">Next ➡</button>
+</div>
+
+<div class="hint">👆 Click the card to flip • ⬅➡ to slide</div>
+
+<script>
+const cards = [
+  { front: "🧭 Address Bus", back: "Carries the address of memory or I/O location accessed by the CPU." },
+  { front: "📍 Address Lines", back: "Individual signal lines representing a binary address." },
+  { front: "⚖️ Arbitration", back: "Decides which device gets control of the bus." },
+  { front: "🔌 Bus", back: "Shared communication path connecting CPU, memory, and I/O devices." },
+  { front: "🎛️ Control Lines", back: "Carry signals like read, write, interrupt, and clock." },
+  { front: "📦 Data Bus", back: "Transfers actual data between system components." },
+  { front: "⚡ Differential Signaling", back: "Uses opposite signals to improve speed and reliability." },
+  { front: "🚨 Interrupt", back: "Signal that temporarily halts CPU execution." },
+  { front: "🛠️ ISR", back: "Interrupt Service Routine that handles interrupts." },
+  { front: "🧠 MAR", back: "Stores address of memory location to be accessed." },
+  { front: "📥 MBR", back: "Temporarily holds data being transferred." }
+];
+
+let current = 0;
+let flipped = false;
+
+function showCard() {
+  const card = document.getElementById("card");
+  card.classList.remove("flipped");
+  flipped = false;
+
+  document.getElementById("frontText").innerText = cards[current].front;
+  document.getElementById("backText").innerText = cards[current].back;
+}
+
+function flipCard() {
+  const card = document.getElementById("card");
+  card.classList.toggle("flipped");
+  flipped = !flipped;
+}
+
+function nextCard() {
+  current = (current + 1) % cards.length;
+  showCard();
+}
+
+function prevCard() {
+  current = (current - 1 + cards.length) % cards.length;
+  showCard();
+}
+
+showCard();
+</script>
+
+</body>
+</html>

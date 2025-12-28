@@ -1,0 +1,230 @@
+<h1>Computer Components</h1>
+
+<h2>🖥️ Von Neumann Architecture</h2>
+
+<p>
+Modern computer systems are based on the <b>von Neumann architecture</b>, proposed by
+<b>John von Neumann</b>. It introduced the idea of storing programs and data in the
+same memory, which made computers more flexible and powerful.
+</p>
+
+<!-- HIGHLIGHT BOX -->
+<div class="highlight-box">
+  <b>📌 Did You Know?</b><br>
+  The von Neumann architecture is the foundation of most modern computers used today.
+</div>
+
+<h3>🔑 Key Principles</h3>
+
+<div class="highlight-box">
+  <b>• Single Memory:</b> Data and instructions are stored together in a
+  <b>single read–write memory</b>.
+</div>
+
+<div class="highlight-box">
+  <b>• Address-Based Memory:</b> Memory locations are identified using
+  <b>addresses</b>, not by data type.
+</div>
+
+<div class="highlight-box">
+  <b>• Sequential Execution:</b> Instructions are executed one after another,
+  unless control instructions change the order.
+</div>
+
+<h3>⚙️ From Hardware to Software</h3>
+
+<p>
+Earlier computers used <b>hardwired programs</b>, meaning the hardware had to be
+physically rewired for each task.
+</p>
+
+<div class="highlight-box">
+  <b>💡 Key Idea:</b><br>
+  Von Neumann introduced <b>general-purpose hardware</b> controlled by
+  <b>instructions</b>. A sequence of instructions forms <b>software</b>.
+</div>
+
+<h3>🧠 Central Processing Unit (CPU)</h3>
+
+<p>The <b>CPU</b> is the brain of the computer. It mainly consists of:</p>
+
+<div class="highlight-box">
+  <b>• Instruction Interpreter:</b> Fetches and decodes instructions.<br><br>
+  <b>• Arithmetic and Logic Unit (ALU):</b> Performs calculations and logical decisions.
+</div>
+
+<h3>🔄 Memory and I/O</h3>
+
+<p>
+For smooth operation, computers use <b>Input and Output (I/O) devices</b> to receive
+data and display results.
+</p>
+
+<div class="highlight-box">
+  <b>🗂️ Main Memory:</b><br>
+  Temporarily stores data and instructions while programs are running.
+</div>
+
+<h3>📚 Reference Links</h3>
+
+<ul>
+  <li>
+    <a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture" target="_blank">
+      Von Neumann Architecture – Wikipedia
+    </a>
+  </li>
+  <li>
+    <a href="https://www.geeksforgeeks.org/von-neumann-architecture/" target="_blank">
+      Von Neumann Architecture – GeeksforGeeks
+    </a>
+  </li>
+  <li>
+    <a href="https://www.britannica.com/technology/computer-architecture" target="_blank">
+      Computer Architecture – Britannica
+    </a>
+  </li>
+</ul>
+
+<!-- CSS -->
+<style>
+.highlight-box {
+  border-left: 5px solid black;
+  background-color: #f5f5f5;
+  padding: 12px 15px;
+  margin: 15px 0;
+  font-size: 15px;
+}
+</style>
+<div class="button-section">
+  <a href="https://wayground.com/join?gc=58943398&source=liveDashboard"
+     target="_blank"
+     class="quiz-btn">
+    Click Here to Attend the Quiz
+  </a>
+</div>
+<style>
+.button-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.quiz-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+.quiz-btn:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+<div class="card-container">
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        Memory Address Register (MAR)
+      </div>
+      <div class="card-back">
+        Holds the address of the memory location.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        Memory Buffer Register (MBR)
+      </div>
+      <div class="card-back">
+        Holds data being transferred.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        I/O Address Register (I/OAR)
+      </div>
+      <div class="card-back">
+        Stores the address of the I/O device.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        I/O Buffer Register (I/OBR)
+      </div>
+      <div class="card-back">
+        Holds data transferred to/from I/O devices.
+      </div>
+    </div>
+  </div>
+
+</div>
+<style>
+.card-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  width: 240px;
+  height: 150px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;          /* ✅ REQUIRED */
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;          /* ✅ REQUIRED */
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  backface-visibility: hidden;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 black;
+  font-size: 15px;
+}
+
+.card-front {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>

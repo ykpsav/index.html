@@ -1,0 +1,236 @@
+<h1>Computer Functions & Instruction Cycle</h1>
+
+<h2>📌 Basic Function of a Computer</h2>
+
+<pre>
+┌──────────────┐
+│   MEMORY     │
+│(Instructions)│
+└──────┬───────┘
+       │ Fetch
+       ▼
+┌──────────────┐
+│   PROCESSOR  │
+│    (CPU)     │
+└──────┬───────┘
+       │ Execute
+       ▼
+┌──────────────┐
+│  OPERATION   │
+│ (ALU / I/O)  │
+└──────┬───────┘
+       ↺ Repeat until HALT
+</pre>
+
+<p>
+The basic function of a computer is to <b>fetch</b> and <b>execute</b> instructions stored
+in memory until a <b>HALT</b> instruction occurs.
+</p>
+
+<hr>
+
+<h2>🔄 Instruction Cycle</h2>
+
+<p>
+The <b>instruction cycle</b> is the complete process of fetching and executing an instruction.
+</p>
+
+<ul>
+  <li><b>Fetch Cycle:</b> Instruction is fetched from memory using the PC and loaded into IR.</li>
+  <li><b>Execute Cycle:</b> Instruction is decoded and executed by the processor.</li>
+</ul>
+
+<p><b>Cycle repeats until HALT instruction.</b></p>
+
+<hr>
+
+<h2>🧠 CPU Registers</h2>
+
+<ul>
+  <li><b>Program Counter (PC):</b> Stores address of next instruction.</li>
+  <li><b>Instruction Register (IR):</b> Holds current instruction.</li>
+  <li><b>Accumulator (AC):</b> Stores intermediate data/results.</li>
+</ul>
+
+<hr>
+
+<h2>⚙️ Types of Processor Operations</h2>
+
+<ul>
+  <li>Processor–Memory Operation</li>
+  <li>Processor–I/O Operation</li>
+  <li>Data Processing Operation</li>
+  <li>Control Operation</li>
+</ul>
+
+<hr>
+
+<h2>🧾 Instruction Format</h2>
+
+<pre>
+┌───────────┬──────────────┐
+│  OPCODE   │   ADDRESS    │
+└───────────┴──────────────┘
+</pre>
+
+<ul>
+  <li><b>Opcode:</b> Specifies the operation</li>
+  <li><b>Address:</b> Specifies memory or I/O location</li>
+</ul>
+
+<hr>
+
+<h2>🔁 Instruction Cycle State Diagram (Exam Gold)</h2>
+
+<p><b>IAC → IF → IOD → OAC → OF → DO → OS → Next Instruction</b></p>
+
+<hr>
+
+<h2>🛑 HALT Instruction</h2>
+
+<p>
+The <b>HALT</b> instruction stops program execution and ends the instruction cycle.
+</p>
+<h2>🧩 Practice Activities</h2>
+
+<div class="practice-section">
+
+  <a href="https://crosswordlabs.com/view/computer-functions-3"
+     target="_blank"
+     class="practice-btn">
+    🔗 Computer Functions Crossword
+  </a>
+
+  <a href="https://thewordsearch.com/puzzle/9335100/computer-function-and-instruction-cycle/"
+     target="_blank"
+     class="practice-btn">
+    🧠 Instruction Cycle Word Search
+  </a>
+
+</div>
+<style>
+.practice-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.practice-btn {
+  display: inline-block;
+  padding: 14px 26px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+  min-width: 260px;
+}
+
+.practice-btn:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+<div class="flashcard-container">
+
+  <div class="flashcard">
+    <div class="inner">
+      <div class="front">Instruction Cycle</div>
+      <div class="back">Fetch + Execute of one instruction</div>
+    </div>
+  </div>
+
+  <div class="flashcard">
+    <div class="inner">
+      <div class="front">Program Counter (PC)</div>
+      <div class="back">Holds address of next instruction</div>
+    </div>
+  </div>
+
+  <div class="flashcard">
+    <div class="inner">
+      <div class="front">Instruction Register (IR)</div>
+      <div class="back">Stores current instruction</div>
+    </div>
+  </div>
+
+  <div class="flashcard">
+    <div class="inner">
+      <div class="front">Accumulator (AC)</div>
+      <div class="back">Stores intermediate results</div>
+    </div>
+  </div>
+
+  <div class="flashcard">
+    <div class="inner">
+      <div class="front">Opcode</div>
+      <div class="back">Specifies operation to perform</div>
+    </div>
+  </div>
+
+  <div class="flashcard">
+    <div class="inner">
+      <div class="front">HALT</div>
+      <div class="back">Stops program execution</div>
+    </div>
+  </div>
+
+</div>
+<style>
+.flashcard-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.flashcard {
+  width: 220px;
+  height: 130px;
+  perspective: 1000px;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flashcard:hover .inner {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  backface-visibility: hidden;
+  font-weight: bold;
+}
+
+.front {
+  background: white;
+  color: black;
+}
+
+.back {
+  background: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
